@@ -1,4 +1,4 @@
-# IServ Integration für Home Assistant
+# HAIServPlus – IServ Integration für Home Assistant
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
 
@@ -36,7 +36,7 @@ Da diese Integration (noch) nicht im Standard-HACS-Store ist, musst du sie als b
 
 ### Methode 2: Manuell
 1. Lade das Repository als ZIP-Datei herunter.
-2. Kopiere den Ordner `custom_components/iserv` in das Verzeichnis `custom_components` deiner Home Assistant Installation (z. B. auf deiner Synology NAS).
+2. Kopiere den Ordner `custom_components/iservplus` in das Verzeichnis `custom_components` deiner Home Assistant Installation (z. B. auf deiner Synology NAS).
 3. **Starte Home Assistant neu!**
 
 ---

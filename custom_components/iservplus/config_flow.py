@@ -36,7 +36,7 @@ class IServConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             else:
                 await self.async_set_unique_id(f"{username}@{host}")
                 self._abort_if_unique_id_configured()
-                return self.async_create_entry(title=f"IServ {username}", data=user_input)
+                return self.async_create_entry(title=f"IServPlus {username}", data=user_input)
 
         schema = vol.Schema({
             vol.Required(CONF_HOST, default="gollanczschule.berlin"): str,
