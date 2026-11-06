@@ -1,0 +1,43 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up IServ account",
+        "description": "Enter the credentials for your IServ school portal.",
+        "data": {
+          "host": "Host",
+          "username": "Username",
+          "password": "Password",
+          "course_filter": "Course filter (optional)",
+          "letters_unread_only": "Show unread parent letters only"
+        },
+        "data_description": {
+          "host": "The URL of your IServ portal without https://, e.g. myschool.de",
+          "username": "Your IServ username, usually firstname.lastname",
+          "password": "Your IServ password (also used for the IMAP mail check)",
+          "course_filter": "Course IDs separated by |, e.g. 2627690|2627709. Leave empty to fetch all courses.",
+          "letters_unread_only": "If enabled, the parent letters sensor only shows letters that have not been read or acknowledged yet."
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Login failed. Please check host, username and password."
+    },
+    "abort": {
+      "already_configured": "This IServ account is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "IServ options",
+        "data": {
+          "letters_unread_only": "Show unread parent letters only"
+        },
+        "data_description": {
+          "letters_unread_only": "If enabled, the parent letters sensor only shows letters that have not been read or acknowledged yet. The change takes effect immediately after saving."
+        }
+      }
+    }
+  }
+}

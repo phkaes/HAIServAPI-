@@ -265,4 +265,20 @@ class IServParentalLettersSensor(CoordinatorEntity, SensorEntity):
 
     @property
     def extra_state_attributes(self):
-        return {"briefe": self.coordinator.data.get("elternbriefe", [])}
+        letters = self.coordinator.data.get("elternbriefe", [])
+        # Kompakte Darstellung inkl. Inhalt; begrenzt wegen des
+        # 16-KB-Attribut-Limits des Home-Assistant-Recorders.
+        kompakt = []
+        for b in letters[:10]:
+            if not isinstance(b, dict):
+                continue
+            kompakt.append({
+                "betreff": b.get("title") or b.get("subject") or "",
+                "datum": b.get("createdAt") or b.get("date") or "",
+                "gelesen": b.get("read", b.get("acknowledged")),
+                "inhalt": (b.get("content") or "")[:1500],
+            })
+        return {
+            "nur_ungelesen": getattr(self.coordinator, "letters_unread_only", False),
+            "briefe": kompakt,
+        }

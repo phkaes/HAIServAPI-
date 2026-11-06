@@ -1,0 +1,43 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "IServ-Zugang einrichten",
+        "description": "Gib die Zugangsdaten für dein IServ-Schulportal ein.",
+        "data": {
+          "host": "Host",
+          "username": "Benutzername",
+          "password": "Passwort",
+          "course_filter": "Kurs-Filter (optional)",
+          "letters_unread_only": "Nur ungelesene Elternbriefe anzeigen"
+        },
+        "data_description": {
+          "host": "Die URL deines IServ-Portals ohne https://, z. B. meineschule.de",
+          "username": "Dein IServ-Benutzername, meist vorname.nachname",
+          "password": "Dein IServ-Passwort (wird auch für den IMAP-Abruf genutzt)",
+          "course_filter": "Kurs-IDs durch | getrennt, z. B. 2627690|2627709. Leer lassen für alle Kurse.",
+          "letters_unread_only": "Wenn aktiviert, zeigt der Elternbrief-Sensor nur Briefe, die noch nicht gelesen bzw. bestätigt wurden."
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Anmeldung fehlgeschlagen. Bitte Host, Benutzername und Passwort prüfen."
+    },
+    "abort": {
+      "already_configured": "Dieser IServ-Zugang ist bereits eingerichtet."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "IServ-Optionen",
+        "data": {
+          "letters_unread_only": "Nur ungelesene Elternbriefe anzeigen"
+        },
+        "data_description": {
+          "letters_unread_only": "Wenn aktiviert, zeigt der Elternbrief-Sensor nur Briefe, die noch nicht gelesen bzw. bestätigt wurden. Die Änderung greift sofort nach dem Speichern."
+        }
+      }
+    }
+  }
+}

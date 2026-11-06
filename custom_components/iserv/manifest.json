@@ -1,10 +1,10 @@
 {
   "domain": "iserv",
-  "name": "IServ",
-  "codeowners": ["@Zippochonda"],
+  "name": "IServ+",
+  "codeowners": ["@phkaes"],
   "config_flow": true,
-  "documentation": "https://github.com/Zippochonda/HAIServAPI",
-  "issue_tracker": "https://github.com/Zippochonda/HAIServAPI/issues",
+  "documentation": "https://github.com/phkaes/HAIServAPI",
+  "issue_tracker": "https://github.com/phkaes/HAIServAPI/issues",
   "integration_type": "hub",
   "iot_class": "cloud_polling",
   "requirements": [
@@ -12,5 +12,5 @@
     "requests>=2.31.0",
     "webdavclient3>=3.1.4"
   ],
-  "version": "1.0.0"
+  "version": "1.1.0"
 }
